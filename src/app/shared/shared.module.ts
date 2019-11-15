@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 
 @NgModule({
-  declarations: [],
   imports: [],
+  declarations: [],
   providers: []
 })
-export class MainModule { }
+export class SharedModule {}

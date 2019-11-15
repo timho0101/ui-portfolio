@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NavBarModule } from '../nav-bar/nav-bar.module';
+import { HomeComponent } from './home.component';
+
 
 const routes: Routes = [
-  { path: '/nav-bar', loadChildren: () => NavBarModule}
+  {
+    path: '', component: HomeComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MainRoutingModule { }
+export class HomeRoutingModule {
+  static components = [ HomeComponent ];
+}
