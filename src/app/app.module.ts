@@ -12,23 +12,21 @@ import {
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavBarComponent } from './core/nav-bar/nav-bar.component';
-import { MainComponent } from './core/main/main.component';
-import { HomeComponent } from './features/home/home.component';
-import { FooterComponent } from './core/footer/footer.component';
-
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { MainComponent } from './main/main.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { FeaturesModule } from './features/features.module';
+import { SharedModule } from './shared/shared.module';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavBarComponent,
-    MainComponent,
-    HomeComponent,
-    FooterComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     MatButtonModule,
     MatCardModule,
     BrowserAnimationsModule,

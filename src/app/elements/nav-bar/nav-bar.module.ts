@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { NavBarRoutingModule } from './nav-bar-routing.module';
 
 @NgModule({
+  imports: [NavBarRoutingModule],
   declarations: [],
-  imports: [],
   providers: []
 })
 export class NavBarModule { }
