@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
-  imports: [],
+  imports: [PipesModule],
   declarations: [],
   providers: []
 })

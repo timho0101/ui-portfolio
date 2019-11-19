@@ -5,4 +5,4 @@ import { NgModule } from '@angular/core';
   declarations: [],
   providers: []
 })
-export class PipesModule {}
+export class ModalModule { }
