@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [RouterModule],
   exports: [BodyComponent],
-  declarations: [BodyComponent],
-  providers: []
+  declarations: [BodyComponent]
 })
 export class BodyModule { }

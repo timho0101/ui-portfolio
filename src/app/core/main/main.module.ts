@@ -8,14 +8,11 @@ import { NavModule } from '../nav/nav.module';
 @NgModule({
   imports: [
     RouterModule,
-    BodyModule,
     NavModule,
+    BodyModule,
     FooterModule
   ],
-  exports: [],
-  declarations: [
-    MainComponent
-  ],
+  declarations: [MainComponent],
   providers: []
 })
 export class MainModule { }

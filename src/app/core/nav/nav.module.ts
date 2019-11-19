@@ -4,12 +4,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [RouterModule],
-  exports: [
-    NavComponent
-  ],
-  declarations: [
-    NavComponent
-  ],
-  providers: []
+  exports: [NavComponent],
+  declarations: [NavComponent]
 })
 export class NavModule { }
