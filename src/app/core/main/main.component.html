@@ -1,8 +1,29 @@
-<app-nav></app-nav>
-<div class="container">
-  <app-body></app-body>
+<div class="row">
+  <div class="col-2">
+    <div class="container">
+      <app-left-side-nav-bar></app-left-side-nav-bar>
+    </div>
+  </div>
+  <div class="col-8">
+    <section>
+      <app-nav></app-nav>
+    </section>
+    <section>
+      <app-wallpaper></app-wallpaper>
+    </section>
+    <section>
+      <app-body></app-body>
+    </section>
+    <section>
+      <app-footer></app-footer>
+    </section>
+  </div>
+  <div class="col-2">
+    <div class="container">
+      <app-right-side-nav-bar></app-right-side-nav-bar>
+    </div>
+  </div>
 </div>
-<app-footer></app-footer>
 
 
 
