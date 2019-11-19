@@ -1,2 +1,51 @@
-<button class="btn btn-primary" routerLink="/bookOfFlame">Book Of Flame</button>
-<button class="btn btn-primary" routerLink="/bookOfWater">Book Of Water</button>
+<!-- <mat-toolbar color="primary">
+  <span>
+    <a mat-raised-button routerLink="/bookOfFlame">Book Of Flame</a>
+  </span>
+
+  <span class="fill-remaining-space">
+    <a mat-raised-button routerLink="/bookOfWater">Book Of Water</a>
+  </span>
+
+  <span>
+    <button mat-button [matMenuTriggerFor]="menu">User</button>
+    <mat-menu #menu="matMenu">
+    </mat-menu>
+  </span>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voicemail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <a class="navbar-brand" routerLink="">Brand</a> -->
+
+  <button class="navbar-toggler" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="container collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/bookOfFlame">Book Of Flame</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"routerLink="/bookOfWater">Book Of Water</a>
+      </li>
+    </ul>
+  </div>
+</nav>

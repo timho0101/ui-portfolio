@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { FooterComponent } from './footer.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
-  imports: [],
+  imports: [MatToolbarModule],
   exports: [FooterComponent],
   declarations: [FooterComponent]
 })
