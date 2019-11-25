@@ -1,0 +1,10 @@
+<a mat-button [matMenuTriggerFor]="books">Books Index</a>
+
+<mat-menu #books="matMenu">
+  <a mat-menu-item>
+    <a class="nav-link" routerLink="/bookOfFlame">Book Of Flame</a>
+  </a>
+  <a mat-menu-item>
+    <a class="nav-link"routerLink="/bookOfWater">Book Of Water</a>
+  </a>
+</mat-menu>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material';
 
 @Component({
   selector: 'app-left-side-nav-bar',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class LeftSideNavBarComponent implements OnInit {
 
   constructor() { }
+
 
   ngOnInit() {
   }
