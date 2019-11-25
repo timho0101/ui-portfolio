@@ -1,32 +1,33 @@
 <div class="container">
-  <app-nav></app-nav>
-
-  <div class="row">
-    <div class="col-3 border-right">
-      <div class="container">
-        <app-left-side-nav-bar></app-left-side-nav-bar>
-      </div>
-    </div>
-    <div class="col-8">
-      <section>
-        <!-- <app-nav></app-nav> -->
-      </section>
-      <section>
-        <!-- <app-wallpaper></app-wallpaper> -->
-      </section>
-      <section>
-        <app-body></app-body>
-      </section>
-      <section>
-        <app-footer></app-footer>
-      </section>
-    </div>
-    <!-- <div class="col-1">
-      <div class="container">
-        <app-right-side-nav-bar></app-right-side-nav-bar>
-      </div>
-    </div> -->
+  <div>
+    <app-nav></app-nav>
   </div>
-
+  <section>
+    <div class="row">
+      <div class="col-2 verticalLine">
+        <div>
+          <app-left-side-nav-bar></app-left-side-nav-bar>
+        </div>
+      </div>
+      <!-- <div class="verticalLine"></div> -->
+      <div class="col">
+        <section>
+          <!-- <app-nav></app-nav> -->
+        </section>
+        <section>
+          <!-- <app-wallpaper></app-wallpaper> -->
+        </section>
+        <app-body></app-body>
+      </div>
+      <!-- <div class="col-1">
+        <div class="container">
+          <app-right-side-nav-bar></app-right-side-nav-bar>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
 </div>
 
