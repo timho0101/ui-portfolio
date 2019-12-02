@@ -1,10 +1,104 @@
-<a mat-button [matMenuTriggerFor]="books">Books Index</a>
+<a mat-button [matMenuTriggerFor]="modules">Books Index</a>
 
-<mat-menu #books="matMenu">
+<!--------Modules------------------------------------------------->
+<mat-menu #modules="matMenu">
+  <a mat-menu-item [matMenuTriggerFor]="coreModules">Core Modules</a>
+  <a mat-menu-item [matMenuTriggerFor]="elementModules">Element Modules</a>
+  <a mat-menu-item [matMenuTriggerFor]="modelModules">Model Modules</a>
+  <a mat-menu-item [matMenuTriggerFor]="notes">Notes</a>
+  <a mat-menu-item [matMenuTriggerFor]="shared">Shared</a>
+  <a mat-menu-item [matMenuTriggerFor]="theme">Theme</a>
+</mat-menu>
+
+<!------------------------------------Core Modules----------->
+<mat-menu #coreModules="matMenu">
+  <a mat-menu-item [matMenuTriggerFor]="api">api</a>
+  <a mat-menu-item [matMenuTriggerFor]="body">body</a>
+  <a mat-menu-item [matMenuTriggerFor]="footer">footer</a>
+  <a mat-menu-item [matMenuTriggerFor]="leftSideNavBar">left-side-nav-bar</a>
+  <a mat-menu-item [matMenuTriggerFor]="main">main</a>
+  <a mat-menu-item [matMenuTriggerFor]="nav">nav</a>
+  <a mat-menu-item [matMenuTriggerFor]="services">services</a>
+  <a mat-menu-item [matMenuTriggerFor]="wallpaper">wallpaper</a>
+</mat-menu>
+
+<!-------API---------------------->
+<mat-menu #api="matMenu">
+  <a mat-menu-item>api.service.ts</a>
+  <a mat-menu-item>apiRoute.js</a>
+  <a mat-menu-item>index.js</a>
+</mat-menu>
+
+<!--------BODY--------------------->
+<mat-menu #body="matMenu">
+  <a mat-menu-item>show body...</a>
+</mat-menu>
+
+<!--------FOOTER------------------>
+<mat-menu #footer="matMenu">
+  <a mat-menu-item>show footer....</a>
+</mat-menu>
+
+<!-------Left-Side-Nav-Bar-->
+<mat-menu #leftSideNavBar>
+  <a mat-menu-item [matMenuTriggerFor]="booksIndex">books-index
+    <mat-menu #booksIndex="matMenu">
+      <a mat-menu-item>show book index....</a>
+    </mat-menu>
+  </a>
+  <a mat-menu-item>show left side nav bar</a>
+</mat-menu>
+
+<!--------MAIN------------------------>
+<mat-menu #main="matMenu">
+  <a mat-menu-item>show main....</a>
+</mat-menu>
+
+<!--------NAV-------------------------->
+<mat-menu #nav="matMenu">
+  <a mat-menu-item>show nav.....</a>
+</mat-menu>
+
+<!--------SERVICES---------------------->
+<mat-menu #services="matMenu">
+  <a mat-menu-item>show servies</a>
+</mat-menu>
+
+<!--------WALLPAPER---------------------->
+<mat-menu #wallpaper="matMenu">
+  <a mat-menu-item>show wallpaper</a>
+</mat-menu>
+
+<!--------------------------------------------------END OF CORE MODULES---------------------------------------------->
+
+<!------------------------------------------Elements Modules----------------------------------------------------------->
+<mat-menu #elementModules="matMenu">
   <a mat-menu-item>
     <a class="nav-link" routerLink="/bookOfFlame">Book Of Flame</a>
   </a>
   <a mat-menu-item>
     <a class="nav-link"routerLink="/bookOfWater">Book Of Water</a>
   </a>
+</mat-menu>
+
+<!-------Model Modules-------------->
+<mat-menu #modelModules="matMenu">
+  <a mat-menu-item>empty atm...</a>
+</mat-menu>
+
+<!-------Notes----------------------->
+<mat-menu #notes="matMenu">
+  <a mat-menu-item>material-samples.ts</a>
+  <a mat-menu-item>preventing-reimport-of-core.ts</a>
+  <a mat-menu-item>routing-modules.module.ts</a>
+</mat-menu>
+
+<!--------Shared-------------------->
+<mat-menu #shared="matMenu">
+  <a mat-menu-item>empty atm...</a>
+</mat-menu>
+
+<!-----------theme------------------>
+<mat-menu #theme="matMenu">
+  <a mat-menu-item>empty atm...</a>
 </mat-menu>
