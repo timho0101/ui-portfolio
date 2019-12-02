@@ -4,14 +4,12 @@ import { RouterModule } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { BooksIndexComponent } from './books-index/books-index.component';
-import { AnimalsIndexModule } from './animals-index/animals-index.module';
 
 @NgModule({
   imports: [
     RouterModule,
     MatMenuModule,
-    MatButtonModule,
-    AnimalsIndexModule
+    MatButtonModule
   ],
   exports: [LeftSideNavBarComponent],
   declarations: [
