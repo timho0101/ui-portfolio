@@ -5,6 +5,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { BooksIndexComponent } from './books-index/books-index.component';
 import { ToolsComponent } from './tools/tools.component';
+import { RsComComponent } from './rs-com/rs-com.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { ToolsComponent } from './tools/tools.component';
   declarations: [
     LeftSideNavBarComponent,
     BooksIndexComponent,
-    ToolsComponent
+    ToolsComponent,
+    RsComComponent
   ],
   providers: []
 })

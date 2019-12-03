@@ -6,6 +6,7 @@ import { BookOfWatersModule } from './elements/book-of-waters/book-of-waters.mod
 import { AboutModule } from './elements/about/about.module';
 import { ContactModule } from './elements/contact/contact.module';
 import { LazyLoadingModule } from './elements/lazy-loading/lazy-loading.module';
+import { RsCarouselControlModule } from './elements/rs-carousel-control/rs-carousel-control.module';
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
       {path: 'bookOfWater', loadChildren: () => BookOfWatersModule},
       {path: 'about', loadChildren: () => AboutModule},
       {path: 'contact', loadChildren: () => ContactModule},
-      {path: 'lazyLoading', loadChildren: () => LazyLoadingModule}
+      {path: 'lazyLoading', loadChildren: () => LazyLoadingModule},
+      {path: 'rsCarouselControl', loadChildren: () => RsCarouselControlModule}
     ],
   }
 ];
