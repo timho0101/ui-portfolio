@@ -1,5 +1,5 @@
 .verticalLine {
-  border-right: solid gray;
+  border-right: 2px solid gray;
 }
 
 html,
@@ -18,4 +18,8 @@ body {
  position: absolute;
  bottom: 0;
  width: 100%;
+}
+
+.nav-bar {
+  margin: 5px auto 10px auto;
 }
