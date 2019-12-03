@@ -5,7 +5,7 @@ import { BookOfFlamesModule } from './elements/book-of-flames/book-of-flames.mod
 import { BookOfWatersModule } from './elements/book-of-waters/book-of-waters.module';
 import { AboutModule } from './elements/about/about.module';
 import { ContactModule } from './elements/contact/contact.module';
-import { BlogsModule } from './elements/blogs/blogs.module';
+import { LazyLoadingModule } from './elements/lazy-loading/lazy-loading.module';
 
 const routes: Routes = [
   {
@@ -14,7 +14,7 @@ const routes: Routes = [
       {path: 'bookOfWater', loadChildren: () => BookOfWatersModule},
       {path: 'about', loadChildren: () => AboutModule},
       {path: 'contact', loadChildren: () => ContactModule},
-      {path: 'blogs', loadChildren: () => BlogsModule}
+      {path: 'lazyLoading', loadChildren: () => LazyLoadingModule}
     ],
   }
 ];

@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { BooksIndexComponent } from './books-index/books-index.component';
+import { ToolsComponent } from './tools/tools.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { BooksIndexComponent } from './books-index/books-index.component';
   exports: [LeftSideNavBarComponent],
   declarations: [
     LeftSideNavBarComponent,
-    BooksIndexComponent
+    BooksIndexComponent,
+    ToolsComponent
   ],
   providers: []
 })
