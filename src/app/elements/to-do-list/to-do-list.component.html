@@ -1,0 +1,13 @@
+<mat-card class="mat-elevation-z8">
+  <mat-card-title><code>To Do List</code></mat-card-title>
+  <mat-card-content>
+    <form [formGroup] = "todoForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <mat-form-field class="form-field-width">
+          <input matInput placeholder="Tasks" formControlName="tasks"/>
+        </mat-form-field>
+      </div>
+    </form>
+    <div *ngFor="let task of todo">{{task}}</div>
+  </mat-card-content>
+</mat-card>

@@ -1,9 +1,21 @@
-<a mat-button [matMenuTriggerFor]="tools">Tools</a>
+<a mat-button [matMenuTriggerFor]="tools">Angular</a>
 
 <!--------Modules------------------------------------------------->
 <mat-menu #tools="matMenu">
   <a mat-menu-item>
+    <a class="nav-link" routerLink="/notes">Notes</a>
+  </a>
+  <a mat-menu-item>
+    <a class="nav-link" routerLink="/todo">ToDo Lists</a>
+  </a>
+  <a mat-menu-item>
     <a class="nav-link" routerLink="/lazyLoading">Lazy Loading</a>
+  </a>
+  <a mat-menu-item>
+    <a class="nav-link" routerLink="/pipes">Pipes</a>
+  </a>
+  <a mat-menu-item>
+    <a class="nav-link" routerLink="/apiServer">Server and API routes</a>
   </a>
   <a mat-menu-item>
     <a class="nav-link" routerLink="/bookOfFlame">Book Of Flame</a>

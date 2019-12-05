@@ -1,6 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-lazy-loading',
@@ -26,6 +24,20 @@ export class LazyLoadingComponent implements OnInit {
       providors: []
     })
     export class LazyLoadingModule { }
+  `;
+
+  public codeRoute = `
+    import { RouterModule, Routes } from '@angular/router';
+    import { NgModule } from '@angular/router';
+
+    const routes: Routes = [
+      {path: 'somewhere', loadChildren: () => someModule}
+    ];
+    @NgModule({
+      import: [RouterModule.forChild(routes)],
+      export: [RouterModule]
+    })
+    export class CodeRoute {}
   `;
 
   ngOnInit() {
