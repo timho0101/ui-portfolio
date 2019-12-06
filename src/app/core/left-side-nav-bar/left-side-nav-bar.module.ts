@@ -4,7 +4,8 @@ import { RouterModule } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { BooksIndexComponent } from './books-index/books-index.component';
-import { ToolsComponent } from './tools/tools.component';
+import { RsComComponent } from './rs-com/rs-com.component';
+import { AngularComponent } from './angular/angular.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { ToolsComponent } from './tools/tools.component';
   declarations: [
     LeftSideNavBarComponent,
     BooksIndexComponent,
-    ToolsComponent
+    RsComComponent,
+    AngularComponent
   ],
   providers: []
 })

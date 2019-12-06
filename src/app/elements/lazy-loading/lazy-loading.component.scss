@@ -6,10 +6,10 @@ th.mat-sort-header-sorted {
   color: black;
 }
 
-.example-card {
+.card {
   max-width: 100%;
 }
 
-// mat-card-header {
-//   background-color: bisque;
-// }
+mat-card {
+  margin-bottom: 15px;
+}

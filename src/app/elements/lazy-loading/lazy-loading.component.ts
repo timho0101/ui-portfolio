@@ -1,31 +1,46 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import {Component, OnInit} from '@angular/core';
 
-export interface PeriodicElement {
-  contents: string;
-  position: number;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, contents: 'ng new customer-app --routing'},
-  {position: 2, contents: 'Helium'},
-  {position: 3, contents: 'Lithium'},
-  {position: 4, contents: 'Beryllium'}
-];
 @Component({
   selector: 'app-lazy-loading',
   templateUrl: './lazy-loading.component.html',
   styleUrls: ['./lazy-loading.component.scss']
 })
 export class LazyLoadingComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'contents'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  public codeModule = `
+    import { NgModule } from '@angular/core';
+    import { RouterModule, Routes } from '@angular/router';
+
+    const routes: Routes = [
+      {path: '', component: LazyLoadingComponent }
+    ]
+
+    @NgModule({
+      import: [
+        RouterModule.forChild(routes)
+      ],
+      export: [RouterModule],
+      decleration: [LazyLoadingComponent],
+      providors: []
+    })
+    export class LazyLoadingModule { }
+  `;
+
+  public codeRoute = `
+    import { RouterModule, Routes } from '@angular/router';
+    import { NgModule } from '@angular/router';
+
+    const routes: Routes = [
+      {path: 'somewhere', loadChildren: () => someModule}
+    ];
+    @NgModule({
+      import: [RouterModule.forChild(routes)],
+      export: [RouterModule]
+    })
+    export class CodeRoute {}
+  `;
 
   ngOnInit() {
-    this.dataSource.sort = this.sort;
-  }
 
+  }
 }

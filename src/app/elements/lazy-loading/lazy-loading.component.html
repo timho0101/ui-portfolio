@@ -1,12 +1,33 @@
-
-
-<mat-card class="example-card">
-  <mat-card-title>Shiba Inu</mat-card-title>
+<mat-card  class="mat-elevation-z8">
+  <mat-card-title><code>Lazy Loading Notes</code></mat-card-title>
   <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
+    <pre>
+      <code>
+        - Export: [RouterModule] for router-outlet. <br>
+        - pro:
+      </code>
+    </pre>
+  </mat-card-content>
+</mat-card>
+<br>
+<mat-card class="example-card mat-elevation-z8">
+  <mat-card-title>
+    <code>LazyLoadingModule</code>
+  </mat-card-title>
+  <mat-card-content>
+    <pre>
+      <code [innerHtml]='codeModule'></code>
+    </pre>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="card mat-elevation-z8">
+  <mat-card-title>
+    <code>Lazy Loading With Module</code>
+  </mat-card-title>
+  <mat-card-content>
+    <pre>
+      <code [innerHtml]='codeRoute'></code>
+    </pre>
   </mat-card-content>
 </mat-card>
