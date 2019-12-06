@@ -1,0 +1,37 @@
+<mat-card class="mat-elevation-z8">
+  <mat-card-title><code>Local & Session Storage</code></mat-card-title>
+  <hr>
+  <mat-card-content>
+    <div class="row">
+      <div class="col">
+        <code><h4>Local Storage</h4></code>
+        <div *ngIf="displayLocal">
+          <pre>{{getItemLocal | json}}</pre>
+        </div>
+        <button class="btn btn-primary mt-4 mr-3" (click)="setItemLocal()">Set Item</button>
+        <button class="btn btn-primary mt-4" (click)="removeItemLocal()">Remove Item</button>
+      </div>
+      <div class="col">
+        <img src="./../../../assets/images/angular_local_session_storage.PNG">
+        <hr>
+        <img src="./../../../assets/images/angular_local_session_storage_1.PNG">
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col">
+        <code><h4>Session Storage</h4></code>
+        <div *ngIf="displaySession">
+          <pre>{{getItemSession | json}}</pre>
+        </div>
+        <button class="btn btn-primary mt-4 mr-3" (click)="setItemSession()">Set Item</button>
+        <button class="btn btn-primary mt-4" (click)="removeItemSession()">Remove Item</button>
+      </div>
+      <div class="col">
+        <img src="./../../../assets/images/angular_local_session_storage_2.PNG">
+        <hr>
+        <img src="./../../../assets/images/angular_local_session_storage_3.PNG">
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

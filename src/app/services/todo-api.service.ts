@@ -13,25 +13,18 @@ export class ToDoApiService {
   private readonly apiURL = 'http://localhost:4000/api';
 
   // dynamoDB apiURL
-  private readonly apiDynamoURL = 'http://localhost:3000/api';
+  // private readonly apiDynamoURL = 'http://localhost:3000/api';
 
-  getData(): Observable<ToDo[]> {
+  getTask(): Observable<ToDo[]> {
     return this.http.get<ToDo[]>(`${this.apiURL}/getData`);
   }
 
-  getDataById(id: number): Observable<ToDo[]> {
-    return this.http.get<ToDo[]>(`${this.apiURL}/getData/${id}`);
-  }
 
-  addData(data: object): Observable<ToDo[]> {
+  addTask(data: string): Observable<ToDo[]> {
     return this.http.post<ToDo[]>(`${this.apiURL}/addData`, data, httpOptions);
   }
 
-  updateData(data: object, id: number): Observable<ToDo[]> {
-    return this.http.put<ToDo[]>(`${this.apiURL}/updateData/${id}`, data, httpOptions);
-  }
-
-  deleteData(id: number): Observable<ToDo[]> {
+  deleteTask(id: number): Observable<ToDo[]> {
     return this.http.delete<ToDo[]>(`${this.apiURL}/deleteData/${id}`);
   }
 

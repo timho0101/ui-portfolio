@@ -8,6 +8,24 @@
         </mat-form-field>
       </div>
     </form>
-    <div *ngFor="let task of todo">{{task}}</div>
+    <div>
+      {{tasks}}
+    </div>
+  </mat-card-content>
+</mat-card>
+<hr>
+<mat-card class="mat-elevation-z8">
+  <mat-card-title><code>Notes</code></mat-card-title>
+  <hr>
+  <mat-card-content>
+    <code>
+      <h6>
+        - <b>nodemon: npm install -s nodemon</b> <br>
+        - <b>Get tasks: </b> 'SELECT * from table_name' <br>
+        - <b>Create table: </b> 'CREATE TABLE table_name(id int not null auto_increment, tasks varchar(255), primary key(id))'; <br>
+        - <b>Add task: </b> 'INSERT INTO table_name(tasks) VALUES(?)'; <br>
+        - <b>delete task: </b> `DELETE from table_name WHERE id=req.params.id`
+      </h6>
+    </code>
   </mat-card-content>
 </mat-card>

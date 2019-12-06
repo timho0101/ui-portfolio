@@ -12,7 +12,7 @@ const db = mysql.createConnection({
 
 // Create Table
 router.get('/createTable', (req, res, next) => {
-  let sql = 'CREATE TABLE tim_user_register_table(id int not null auto_increment, fName varchar(255), lName varchar(255), userName varchar(255), password varchar(255), primary key(id))';
+  let sql = 'CREATE TABLE to_do(id int not null auto_increment, tasks varchar(255), primary key(id))';
   db.query(sql, function(err, results) {
     if(err) throw err;
     res.json(results);
@@ -52,7 +52,8 @@ router.get('/getData/:id', (req, res) => {
 
 // Update Data by ID
 router.put('/updateData/:id', (req, res) => {
-  let sql = `UPDATE tim_form_table SET fName = '${req.body.fName}', lName = '${req.body.lName}', phoneNum = '${req.body.phoneNum}' WHERE id = ${req.params.id}`;
+  let sql = `UPDATE tim_form_table SET fName =
+  '${req.body.fName}', lName = '${req.body.lName}', phoneNum = '${req.body.phoneNum}' WHERE id = ${req.params.id}`;
   db.query(sql, function(err, results) {
     if(err) throw err;
     res.json(results);

@@ -12,6 +12,7 @@ import { ToDoListModule } from './elements/to-do-list/to-do-list.module';
 import { NpmCommandModule } from './elements/npm-command/npm-command.module';
 import { NotesModule } from './elements/notes/notes.module';
 import { ApiServerModule } from './elements/api-server/api-server.module';
+import { LocalSessionStorageModule } from './elements/local-session-storage/local-session-storage.module';
 
 const routes: Routes = [
   {
@@ -26,7 +27,8 @@ const routes: Routes = [
       {path: 'todo', loadChildren: () => ToDoListModule},
       {path: 'npmCommand', loadChildren: () => NpmCommandModule},
       {path: 'notes', loadChildren: () => NotesModule},
-      {path: 'apiServer', loadChildren: () => ApiServerModule}
+      {path: 'apiServer', loadChildren: () => ApiServerModule},
+      {path: 'localSessionStorage', loadChildren: () => LocalSessionStorageModule}
     ],
   }
 ];

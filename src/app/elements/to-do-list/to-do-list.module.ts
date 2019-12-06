@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { ToDoApiService } from 'src/app/services/todo-api.service';
 
 const routes: Routes = [
   {path: '', component: ToDoListComponent}
@@ -23,6 +24,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [ToDoListComponent],
-  providers: []
+  providers: [
+    ToDoApiService
+  ]
 })
 export class ToDoListModule {}
