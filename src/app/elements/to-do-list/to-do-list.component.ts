@@ -10,9 +10,8 @@ import { ToDoApiService } from 'src/app/services/todo-api.service';
   styleUrls: ['./to-do-list.component.scss']
 })
 export class ToDoListComponent implements OnInit {
-  public todo: ToDo[] = [];
   public todoForm: FormGroup;
-  public tasks: ToDo[];
+  public tasks: ToDo[] = [];
 
   constructor(
     private readonly fb: FormBuilder,
@@ -21,18 +20,32 @@ export class ToDoListComponent implements OnInit {
 
   ngOnInit() {
     this.todoForm = this.fb.group({
+      id: [''],
       tasks: ['']
     });
     this.getTask();
   }
 
   public onSubmit() {
-    this.todo.push(this.todoForm.get('tasks').value);
+    this.addTask();
   }
 
   public getTask(): void {
-    this.todoService.getTask().subscribe(task => {
+    this.todoService.getTasks().subscribe(task => {
       this.tasks = task;
     });
   }
+
+  public addTask(): void {
+    this.todoService.addTask(this.todoForm.value).subscribe(() => {
+      this.getTask();
+    });
+  }
+
+  public deleteTask(id: number): void {
+    this.todoService.deleteTask(id).subscribe(() => {
+      this.getTask();
+    });
+  }
+
 }

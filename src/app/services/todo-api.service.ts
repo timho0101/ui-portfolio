@@ -15,18 +15,20 @@ export class ToDoApiService {
   // dynamoDB apiURL
   // private readonly apiDynamoURL = 'http://localhost:3000/api';
 
-  getTask(): Observable<ToDo[]> {
-    return this.http.get<ToDo[]>(`${this.apiURL}/getData`);
+  getTasks(): Observable<ToDo[]> {
+    return this.http.get<ToDo[]>(`${this.apiURL}/getTasks`);
   }
 
 
-  addTask(data: string): Observable<ToDo[]> {
-    return this.http.post<ToDo[]>(`${this.apiURL}/addData`, data, httpOptions);
+  addTask(data: object): Observable<ToDo[]> {
+    console.log('this is task: ' + data);
+    return this.http.post<ToDo[]>(`${this.apiURL}/addTask`, data, httpOptions);
   }
 
   deleteTask(id: number): Observable<ToDo[]> {
-    return this.http.delete<ToDo[]>(`${this.apiURL}/deleteData/${id}`);
+    return this.http.delete<ToDo[]>(`${this.apiURL}/deleteTask/${id}`);
   }
+
 
   // /*-------------Login and Register--------------------------------------------*/
   // userLogin(): Observable<[]> {

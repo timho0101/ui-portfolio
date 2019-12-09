@@ -6,7 +6,7 @@ const apiRoute = require('./apiRoute');
 const port = 4000;
 
 // body parser
-app.use(bodyParser());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 //cors

@@ -19,16 +19,17 @@ router.get('/createTable', (req, res) => {
   });
 });
 
-// add task
-router.post('/addtask', (req, res) => {
-  let task = req.body.tasks;
-  let values = [task];
-  const sql = 'INSERT INTO to_do(task) VALUES(?)'
-  db.query(sql, values, (err, results) => {
-    if (err) throw err;
-    res.send(results);
-  });
+// Insert Data
+router.post('/addTask', (req, res) => {
+  let tasks = req.body.tasks;
+  let values = [tasks];
+  let sql = `INSERT INTO to_do (tasks) VALUES (?)`;
+  db.query(sql, values, function(err, results) {
+    if(err) throw err;
+    res.json(results);
+  })
 });
+
 
 // get tasks
 router.get('/getTasks', (req, res) => {
