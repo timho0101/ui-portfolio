@@ -8,8 +8,8 @@
         </mat-form-field>
       </div>
     </form>
-    <div>
-      {{tasks}}
+    <div *ngFor="let task of tasks">{{task.tasks}}
+      <span type="button" (click)="deleteTask(task.id)"><mat-icon>done</mat-icon></span>
     </div>
   </mat-card-content>
 </mat-card>
