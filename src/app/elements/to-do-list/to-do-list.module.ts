@@ -9,6 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { ToDoApiService } from 'src/app/services/todo-api.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MatTableModule} from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [
   {path: '', component: ToDoListComponent}
@@ -18,6 +20,8 @@ const routes: Routes = [
   imports: [
     HttpClientModule,
     CommonModule,
+    MatButtonModule,
+    MatTableModule,
     MatIconModule,
     MatInputModule,
     MatCardModule,

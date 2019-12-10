@@ -8,9 +8,35 @@
         </mat-form-field>
       </div>
     </form>
-    <div *ngFor="let task of tasks">{{task.tasks}}
-      <span type="button" (click)="deleteTask(task.id)"><mat-icon>done</mat-icon></span>
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="tasks">
+
+        <!-- id Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>No.</th>
+          <td mat-cell *matCellDef="let task">{{task.id}}</td>
+        </ng-container>
+
+        <!-- Tasks column -->
+        <ng-container matColumnDef="tasks">
+          <th mat-header-cell *matHeaderCellDef>Tasks</th>
+          <td mat-cell *matCellDef="let task">{{task.tasks}}</td>
+        </ng-container>
+
+        <!-- Delete task column -->
+        <ng-container matColumnDef="deleteTaskCol">
+          <th mat-header-cell *matHeaderCellDef>Delete Task</th>
+          <td mat-cell *matCellDef="let task"><button mat-button (click)="deleteTask(task.id)"><mat-icon>clear</mat-icon></button
+            ></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
     </div>
+    <!-- <div *ngFor="let task of tasks">{{task.tasks}}
+      <span type="button" (click)="deleteTask(task.id)"><mat-icon>clear</mat-icon></span>
+    </div> -->
   </mat-card-content>
 </mat-card>
 <hr>

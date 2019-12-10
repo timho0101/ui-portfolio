@@ -13,6 +13,7 @@ import { NpmCommandModule } from './elements/npm-command/npm-command.module';
 import { NotesModule } from './elements/notes/notes.module';
 import { ApiServerModule } from './elements/api-server/api-server.module';
 import { LocalSessionStorageModule } from './elements/local-session-storage/local-session-storage.module';
+import { RsComModule } from './elements/rs-com-notes/rs-com-notes.module';
 
 const routes: Routes = [
   {
@@ -28,7 +29,8 @@ const routes: Routes = [
       {path: 'npmCommand', loadChildren: () => NpmCommandModule},
       {path: 'notes', loadChildren: () => NotesModule},
       {path: 'apiServer', loadChildren: () => ApiServerModule},
-      {path: 'localSessionStorage', loadChildren: () => LocalSessionStorageModule}
+      {path: 'localSessionStorage', loadChildren: () => LocalSessionStorageModule},
+      {path: 'rsComNotes', loadChildren: () => RsComModule}
     ],
   }
 ];
