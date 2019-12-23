@@ -21,7 +21,6 @@ export class ToDoApiService {
 
 
   addTask(data: object): Observable<ToDo[]> {
-    console.log('this is task: ' + data);
     return this.http.post<ToDo[]>(`${this.apiURL}/addTask`, data, httpOptions);
   }
 
