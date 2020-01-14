@@ -14,6 +14,7 @@ import { NotesModule } from './elements/notes/notes.module';
 import { ApiServerModule } from './elements/api-server/api-server.module';
 import { LocalSessionStorageModule } from './elements/local-session-storage/local-session-storage.module';
 import { RsComModule } from './elements/rs-com-notes/rs-com-notes.module';
+import { CssGridLayoutModule } from './elements/css-grid-layout/css-grid-layout.module';
 
 const routes: Routes = [
   {
@@ -30,7 +31,8 @@ const routes: Routes = [
       {path: 'notes', loadChildren: () => NotesModule},
       {path: 'apiServer', loadChildren: () => ApiServerModule},
       {path: 'localSessionStorage', loadChildren: () => LocalSessionStorageModule},
-      {path: 'rsComNotes', loadChildren: () => RsComModule}
+      {path: 'rsComNotes', loadChildren: () => RsComModule},
+      {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule}
     ],
   }
 ];
