@@ -15,6 +15,7 @@ import { ApiServerModule } from './elements/api-server/api-server.module';
 import { LocalSessionStorageModule } from './elements/local-session-storage/local-session-storage.module';
 import { RsComModule } from './elements/rs-com-notes/rs-com-notes.module';
 import { CssGridLayoutModule } from './elements/css-grid-layout/css-grid-layout.module';
+import { UnitTestModule } from './elements/unit-test/unit-test.module';
 
 const routes: Routes = [
   {
@@ -32,7 +33,8 @@ const routes: Routes = [
       {path: 'apiServer', loadChildren: () => ApiServerModule},
       {path: 'localSessionStorage', loadChildren: () => LocalSessionStorageModule},
       {path: 'rsComNotes', loadChildren: () => RsComModule},
-      {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule}
+      {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule},
+      {path: 'unitTest', loadChildren: () => UnitTestModule}
     ],
   }
 ];
