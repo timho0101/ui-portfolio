@@ -7,11 +7,13 @@ import { CoreModule } from './core/core.module';
 import { ElementsModule } from './elements/elements.module';
 import { SharedModule } from './shared/shared.module';
 import { CssGridLayoutZeroComponent } from './elements/css-grid-layout/css-grid-layout-zero/css-grid-layout-zero.component';
+import { CssGridLayoutOneComponent } from './elements/css-grid-layout/css-grid-layout-one/css-grid-layout-one.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CssGridLayoutZeroComponent
+    CssGridLayoutZeroComponent,
+    CssGridLayoutOneComponent
   ],
   imports: [
     CoreModule,

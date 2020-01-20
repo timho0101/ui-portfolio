@@ -17,11 +17,12 @@ import { RsComModule } from './elements/rs-com-notes/rs-com-notes.module';
 import { CssGridLayoutModule } from './elements/css-grid-layout/css-grid-layout.module';
 import { UnitTestModule } from './elements/unit-test/unit-test.module';
 import { CssGridLayoutZeroComponent } from './elements/css-grid-layout/css-grid-layout-zero/css-grid-layout-zero.component';
+import { CssGridLayoutOneComponent } from './elements/css-grid-layout/css-grid-layout-one/css-grid-layout-one.component';
 
 const routes: Routes = [
   {
-    path: '', children: [
-      {
+    path: '', children:
+      [{
         path: '', component: MainComponent, children: [
           {path: 'bookOfFlame', loadChildren: () => BookOfFlamesModule},
           {path: 'bookOfWater', loadChildren: () => BookOfWatersModule},
@@ -37,11 +38,9 @@ const routes: Routes = [
           {path: 'localSessionStorage', loadChildren: () => LocalSessionStorageModule},
           {path: 'rsComNotes', loadChildren: () => RsComModule},
           {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule}
-        ],
-      },
-      {
-        path: 'cssGridExample0', component: CssGridLayoutZeroComponent
-      }
+      ]},
+      {path: 'cssGridExample0', component: CssGridLayoutZeroComponent},
+      {path: 'cssGridExample1', component: CssGridLayoutOneComponent}
     ]
   }
 ];
