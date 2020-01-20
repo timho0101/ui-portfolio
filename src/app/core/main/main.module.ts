@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { FooterModule } from '../footer/footer.module';
 import { BodyModule } from '../body/body.module';
 import { NavModule } from '../nav/nav.module';
-import { WallpaperModule } from '../wallpaper/wallpaper.module';
 import { LeftSideNavBarModule } from '../left-side-nav-bar/left-side-nav-bar.module';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { LeftSideNavBarModule } from '../left-side-nav-bar/left-side-nav-bar.mod
     NavModule,
     BodyModule,
     FooterModule,
-    WallpaperModule,
     LeftSideNavBarModule
   ],
   declarations: [MainComponent],

@@ -16,26 +16,33 @@ import { LocalSessionStorageModule } from './elements/local-session-storage/loca
 import { RsComModule } from './elements/rs-com-notes/rs-com-notes.module';
 import { CssGridLayoutModule } from './elements/css-grid-layout/css-grid-layout.module';
 import { UnitTestModule } from './elements/unit-test/unit-test.module';
+import { CssGridLayoutZeroComponent } from './elements/css-grid-layout/css-grid-layout-zero/css-grid-layout-zero.component';
 
 const routes: Routes = [
   {
-    path: '', component: MainComponent, children: [
-      {path: 'bookOfFlame', loadChildren: () => BookOfFlamesModule},
-      {path: 'bookOfWater', loadChildren: () => BookOfWatersModule},
-      {path: 'about', loadChildren: () => AboutModule},
-      {path: 'contact', loadChildren: () => ContactModule},
-      {path: 'lazyLoading', loadChildren: () => LazyLoadingModule},
-      {path: 'rsCarouselControl', loadChildren: () => RsCarouselControlModule},
-      {path: 'pipes', loadChildren: () => AngularPipesModule},
-      {path: 'todo', loadChildren: () => ToDoListModule},
-      {path: 'npmCommand', loadChildren: () => NpmCommandModule},
-      {path: 'notes', loadChildren: () => NotesModule},
-      {path: 'apiServer', loadChildren: () => ApiServerModule},
-      {path: 'localSessionStorage', loadChildren: () => LocalSessionStorageModule},
-      {path: 'rsComNotes', loadChildren: () => RsComModule},
-      {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule},
-      {path: 'unitTest', loadChildren: () => UnitTestModule}
-    ],
+    path: '', children: [
+      {
+        path: '', component: MainComponent, children: [
+          {path: 'bookOfFlame', loadChildren: () => BookOfFlamesModule},
+          {path: 'bookOfWater', loadChildren: () => BookOfWatersModule},
+          {path: 'about', loadChildren: () => AboutModule},
+          {path: 'contact', loadChildren: () => ContactModule},
+          {path: 'lazyLoading', loadChildren: () => LazyLoadingModule},
+          {path: 'rsCarouselControl', loadChildren: () => RsCarouselControlModule},
+          {path: 'pipes', loadChildren: () => AngularPipesModule},
+          {path: 'todo', loadChildren: () => ToDoListModule},
+          {path: 'npmCommand', loadChildren: () => NpmCommandModule},
+          {path: 'notes', loadChildren: () => NotesModule},
+          {path: 'apiServer', loadChildren: () => ApiServerModule},
+          {path: 'localSessionStorage', loadChildren: () => LocalSessionStorageModule},
+          {path: 'rsComNotes', loadChildren: () => RsComModule},
+          {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule}
+        ],
+      },
+      {
+        path: 'cssGridExample0', component: CssGridLayoutZeroComponent
+      }
+    ]
   }
 ];
 

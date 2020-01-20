@@ -3,8 +3,6 @@ import { LeftSideNavBarComponent } from './left-side-nav-bar.component';
 import { RouterModule } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import { BooksIndexComponent } from './books-index/books-index.component';
-import { RsComComponent } from './rs-com/rs-com.component';
 import { AngularComponent } from './angular/angular.component';
 
 @NgModule({
@@ -16,8 +14,6 @@ import { AngularComponent } from './angular/angular.component';
   exports: [LeftSideNavBarComponent],
   declarations: [
     LeftSideNavBarComponent,
-    BooksIndexComponent,
-    RsComComponent,
     AngularComponent
   ],
   providers: []

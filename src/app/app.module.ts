@@ -6,10 +6,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { ElementsModule } from './elements/elements.module';
 import { SharedModule } from './shared/shared.module';
+import { CssGridLayoutZeroComponent } from './elements/css-grid-layout/css-grid-layout-zero/css-grid-layout-zero.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CssGridLayoutZeroComponent
   ],
   imports: [
     CoreModule,
