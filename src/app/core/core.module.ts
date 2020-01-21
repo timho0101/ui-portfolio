@@ -1,10 +1,7 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
 import { RouterModule, Routes } from '@angular/router';
-import { MainModule } from './main/main.module';
 import { MainComponent } from './main/main.component';
-import { BookOfFlamesModule } from '../elements/book-of-flames/book-of-flames.module';
-import { BookOfWatersModule } from '../elements/book-of-waters/book-of-waters.module';
 import { AboutModule } from '../elements/about/about.module';
 import { ContactModule } from '../elements/contact/contact.module';
 import { LazyLoadingModule } from '../elements/lazy-loading/lazy-loading.module';
@@ -18,6 +15,12 @@ import { LocalSessionStorageModule } from '../elements/local-session-storage/loc
 import { RsComModule } from '../elements/rs-com-notes/rs-com-notes.module';
 import { CssGridLayoutModule } from '../elements/css-grid-layout/css-grid-layout.module';
 import { ElementsModule } from '../elements/elements.module';
+import { MatSidenavModule, MatToolbarModule, MatMenuModule, MatIconModule, MatGridListModule, MatButtonModule } from '@angular/material';
+import { NavComponent } from './nav/nav.component';
+import { LeftSideNavBarComponent } from './left-side-nav-bar/left-side-nav-bar.component';
+import { AngularComponent } from './left-side-nav-bar/angular/angular.component';
+import { FooterComponent } from './footer/footer.component';
+import { BodyComponent } from './body/body.component';
 
 const routes: Routes = [
   {
@@ -42,11 +45,24 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes),
-    MainModule
+    RouterModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatGridListModule,
+    RouterModule.forChild(routes)
   ],
   exports: [RouterModule],
-  declarations: [],
+  declarations: [
+    MainComponent,
+    NavComponent,
+    LeftSideNavBarComponent,
+    AngularComponent,
+    FooterComponent,
+    BodyComponent
+  ],
   providers: []
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {
