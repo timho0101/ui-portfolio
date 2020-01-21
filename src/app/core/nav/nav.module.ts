@@ -6,7 +6,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
@@ -15,8 +14,7 @@ import { BrowserModule } from '@angular/platform-browser';
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
-    MatGridListModule,
-    BrowserModule
+    MatGridListModule
   ],
   exports: [NavComponent],
   declarations: [NavComponent]

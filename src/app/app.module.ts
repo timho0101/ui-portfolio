@@ -6,14 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { ElementsModule } from './elements/elements.module';
 import { SharedModule } from './shared/shared.module';
-import { CssGridLayoutZeroComponent } from './elements/css-grid-layout/css-grid-layout-zero/css-grid-layout-zero.component';
-import { CssGridLayoutOneComponent } from './elements/css-grid-layout/css-grid-layout-one/css-grid-layout-one.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CssGridLayoutZeroComponent,
-    CssGridLayoutOneComponent
+    AppComponent
   ],
   imports: [
     CoreModule,
@@ -21,6 +18,7 @@ import { CssGridLayoutOneComponent } from './elements/css-grid-layout/css-grid-l
     SharedModule,
     AppRoutingModule,
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule
   ],
   providers: [],
