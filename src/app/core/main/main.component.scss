@@ -23,3 +23,18 @@ body {
 .nav-bar {
   margin-top: 15px;
 }
+
+a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  color: darkcyan;
+  display: inline;
+}
+
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+

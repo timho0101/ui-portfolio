@@ -1,12 +1,16 @@
 <div class="container">
   <div class="nav-bar">
-    <app-nav></app-nav>
+    <div class="d-flex flex-row-reverse">
+      <a class="nav-link" routerLink="/contact">Contact</a>
+      <a class="nav-link" routerLink="/about">About</a>
+    </div>
     <hr>
     <app-left-side-nav-bar></app-left-side-nav-bar>
     <hr>
-    <app-body></app-body>
   <div class="footer">
-    <app-footer></app-footer>
+    <div class="d-flex">
+      <p>&copy; Copy Right - 11/2019</p>
+    </div>
   </div>
 </div>
-
+<router-outlet></router-outlet>
