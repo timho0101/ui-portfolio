@@ -36,11 +36,11 @@ const routes: Routes = [
       {path: 'apiServer', loadChildren: () => ApiServerModule},
       {path: 'localSessionStorage', loadChildren: () => LocalSessionStorageModule},
       {path: 'rsComNotes', loadChildren: () => RsComModule},
-      {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule}
+      {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule},
+      {path: '', loadChildren: () => ElementsModule}
     ]
   },
-  {path: '', loadChildren: () => CssGridLayoutModule},
-  {path: '', loadChildren: () => ElementsModule}
+  {path: '', loadChildren: () => CssGridLayoutModule}
 ];
 
 @NgModule({
