@@ -4,8 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { CssGridLayoutModule } from '../elements/css-grid-layout/css-grid-layout.module';
 import { ElementsModule } from '../elements/elements.module';
-import { MatMenuModule } from '@angular/material';
-import { LeftSideNavBarComponent } from './left-side-nav-bar/left-side-nav-bar.component';
+import { MatMenuModule, MatButtonModule } from '@angular/material';
 
 const routes: Routes = [
   {
@@ -20,12 +19,12 @@ const routes: Routes = [
   imports: [
     RouterModule,
     MatMenuModule,
+    MatButtonModule,
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule],
   declarations: [
-    MainComponent,
-    LeftSideNavBarComponent
+    MainComponent
   ],
   providers: []
 })

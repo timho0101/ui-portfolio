@@ -25,8 +25,6 @@ import { PipesModule } from '../shared/pipes/pipes.module';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  {path: 'bookOfFlame', loadChildren: () => BookOfFlamesModule},
-  {path: 'bookOfWater', loadChildren: () => BookOfWatersModule},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'lazyLoading', component: LazyLoadingComponent},

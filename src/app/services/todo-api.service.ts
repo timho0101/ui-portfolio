@@ -27,18 +27,4 @@ export class ToDoApiService {
   deleteTask(id: number): Observable<ToDo[]> {
     return this.http.delete<ToDo[]>(`${this.apiURL}/deleteTask/${id}`);
   }
-
-
-  // /*-------------Login and Register--------------------------------------------*/
-  // userLogin(): Observable<[]> {
-  //   return this.http.get<[]>(`${this.apiURL}/login`);
-  // }
-
-  // userRegister(data: object): Observable<[]> {
-  //   return this.http.post<[]>(`${this.apiURL}/register`, data, httpOptions);
-  // }
-
-  // userDelete(id: number): Observable<[]> {
-  //   return this.http.delete<[]>(`${this.apiURL}/deleteUser/${id}`);
-  // }
 }
