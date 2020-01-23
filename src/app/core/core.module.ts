@@ -9,10 +9,10 @@ import { MatMenuModule, MatButtonModule } from '@angular/material';
 const routes: Routes = [
   {
     path: '', component: MainComponent, children: [
-      {path: '', loadChildren: () => ElementsModule}
+      {path: '', loadChildren: () => ElementsModule},
+      {path: '', loadChildren: () => CssGridLayoutModule}
     ]
-  },
-  {path: '', loadChildren: () => CssGridLayoutModule}
+  }
 ];
 
 @NgModule({

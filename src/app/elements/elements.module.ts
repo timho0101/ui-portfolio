@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BookOfFlamesModule } from './book-of-flames/book-of-flames.module';
-import { BookOfWatersModule } from './book-of-waters/book-of-waters.module';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LazyLoadingComponent } from './lazy-loading/lazy-loading.component';
@@ -25,6 +23,11 @@ import { PipesModule } from '../shared/pipes/pipes.module';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'lazyLoading', component: LazyLoadingComponent},
