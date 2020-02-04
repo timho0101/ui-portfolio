@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  public about = `
-    just storing everything i know about angular
-  `;
-
   ngOnInit() {
   }
 
