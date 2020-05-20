@@ -3,49 +3,22 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-nav',
   template: `
-    <div class="leafygreen-ui-8sj84k">
-      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Logo</span></a>
-      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Search</span></a>
-      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Access Manager DropDown</span></a>
-      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Support</span></a>
-      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Billing</span></a>
-      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">See Product Tour</span></a>
-      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">All Clusters</span></a>
-      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Drop Down</span></a>
+    <div class="div-container wrapper">
+      <div class="nav-float-left">
+        <a class="a-ui"><span class="span-ui">Logo</span></a>
+        <a class="a-ui"><span class="span-ui">Search</span></a>
+        <a class="a-ui"><span class="span-ui">Access Manager DropDown</span></a>
+        <a class="a-ui"><span class="span-ui">Support</span></a>
+        <a class="a-ui"><span class="span-ui">Billing</span></a>
+      </div>
+      <div class="nav-float-right">
+        <a class="a-ui"><span class="span-ui">See Product Tour</span></a>
+        <a class="a-ui"><span class="span-ui">All Clusters</span></a>
+        <a class="a-ui"><span class="span-ui">Drop Down</span></a>
+      </div>
     </div>
   `,
-  styles: [`
-  .leafygreen-ui-8sj84k {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      box-sizing: border-box;
-      height: 60px;
-      padding-left: 15px;
-      padding-right: 15px;
-      font-size: 13px;
-      line-height: 15px;
-      background-color: white;
-      color: rgb(33, 49, 60);
-      border-bottom: 1px solid rgb(231, 238, 236);
-      font-family: Akzidenz,'Helvetica Neue',Helvetica,Arial,sans-serif;
-    }
-    .leafygreen-ui-1ay2x9v {
-      color: rgb(33, 49, 60);
-      margin-right: 5px;
-      margin-left: 5px;
-      text-decoration: none;
-      padding: 4px;
-    }
-    a, a:focus, a:hover {
-      color: #006cbc;
-    }
-    .leafygreen-ui-j752ew {
-      position: relative;
-    }
-  `]
+  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
 

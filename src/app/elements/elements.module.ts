@@ -21,6 +21,10 @@ import {
 } from '@angular/material';
 import { PipesModule } from '../shared/pipes/pipes.module';
 import { CommonModule } from '@angular/common';
+import { NatourComponent } from './natour/natour.component';
+
+// natour
+
 
 const routes: Routes = [
   {
@@ -37,7 +41,8 @@ const routes: Routes = [
   {path: 'notes', component: NotesComponent},
   {path: 'apiServer', component: ApiServerComponent},
   {path: 'localSessionStorage', component: LocalSessionStorageComponent},
-  {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule}
+  {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule},
+  {path: 'natour', component: NatourComponent}
 ];
 
 @NgModule({
@@ -63,7 +68,8 @@ const routes: Routes = [
     NpmCommandComponent,
     NotesComponent,
     ApiServerComponent,
-    LocalSessionStorageComponent
+    LocalSessionStorageComponent,
+    NatourComponent
   ],
   providers: []
 })
