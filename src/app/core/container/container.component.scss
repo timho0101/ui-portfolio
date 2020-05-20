@@ -1,0 +1,58 @@
+.css-rwjph0 {
+  display: grid;
+  width: 100vw;
+  min-height: 100vh;
+  min-width: 767px;
+  background-color: rgb(255, 255, 255);
+  grid-template:
+      [header-start] 60px [header-end body-start] auto [body-end] 235px auto
+      "header header"
+      "side-nav body";
+  margin: 0px;
+
+  grid-template-rows: [header-start] 60px [header-end body-start] auto [body-end];
+  grid-template-columns: 235px auto;
+  grid-template-areas: "header header" "side-nav body";
+
+}
+
+.css-1eydiud {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  z-index: 12;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 60px;
+}
+
+.css-15lz6uf {
+  overflow-y: visible;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 56px;
+  grid-area: side-nav / side-nav / side-nav / side-nav;
+  list-style: none;
+}
+
+.css-1lfrx2g {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  // justify-content: space-between;
+  overflow-y: auto;
+  position: relative;
+  grid-area: body / body / body / body;
+  padding: 24px;
+}
+
+.leafygreen-ui-ufpynv {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(67, 117, 151, 0.08) 0px 3px 7px 0px;
+  z-index: 0;
+  position: relative;
+}
+
+.css-1domaf0 {
+  width: 200px;
+}

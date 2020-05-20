@@ -1,11 +1,12 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
 import { RouterModule, Routes } from '@angular/router';
-import { ContainerComponent } from './main/container.component';
+import { ContainerComponent } from './container/container.component';
 import { CssGridLayoutModule } from '../elements/css-grid-layout/css-grid-layout.module';
 import { ElementsModule } from '../elements/elements.module';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
-import { NavComponent } from './main/nav.component';
+import { NavComponent } from './container/nav.component';
+import { SideNavComponent } from './container/side-nav.component';
 
 const routes: Routes = [
   {
@@ -23,13 +24,15 @@ const routes: Routes = [
     MatButtonModule,
     RouterModule.forChild(routes)
   ],
-  exports: [
-    RouterModule,
-    NavComponent
-  ],
   declarations: [
     ContainerComponent,
-    NavComponent
+    NavComponent,
+    SideNavComponent
+  ],
+  exports: [
+    RouterModule,
+    NavComponent,
+    SideNavComponent
   ],
   providers: []
 })
