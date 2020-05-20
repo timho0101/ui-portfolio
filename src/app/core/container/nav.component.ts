@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Logo</span></a>
       <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Search</span></a>
       <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Access Manager DropDown</span></a>
-      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">support</span></a>
+      <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Support</span></a>
       <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">Billing</span></a>
       <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">See Product Tour</span></a>
       <a class="leafygreen-ui-1ay2x9v"><span class="leafygreen-ui-j752ew">All Clusters</span></a>
@@ -30,6 +30,7 @@ import { Component, OnInit } from '@angular/core';
       background-color: white;
       color: rgb(33, 49, 60);
       border-bottom: 1px solid rgb(231, 238, 236);
+      font-family: Akzidenz,'Helvetica Neue',Helvetica,Arial,sans-serif;
     }
     .leafygreen-ui-1ay2x9v {
       color: rgb(33, 49, 60);
