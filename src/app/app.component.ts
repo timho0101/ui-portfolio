@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
     <router-outlet></router-outlet>
   `
 })
-export class AppComponent {
-  title = 'Game Trader';
-}
+export class AppComponent {}
