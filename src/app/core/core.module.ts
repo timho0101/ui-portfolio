@@ -1,14 +1,15 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './main/main.component';
+import { ContainerComponent } from './main/container.component';
 import { CssGridLayoutModule } from '../elements/css-grid-layout/css-grid-layout.module';
 import { ElementsModule } from '../elements/elements.module';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
+import { NavComponent } from './main/nav.component';
 
 const routes: Routes = [
   {
-    path: '', component: MainComponent, children: [
+    path: '', component: ContainerComponent, children: [
       {path: '', loadChildren: () => ElementsModule},
       {path: '', loadChildren: () => CssGridLayoutModule}
     ]
@@ -22,9 +23,13 @@ const routes: Routes = [
     MatButtonModule,
     RouterModule.forChild(routes)
   ],
-  exports: [RouterModule],
+  exports: [
+    RouterModule,
+    NavComponent
+  ],
   declarations: [
-    MainComponent
+    ContainerComponent,
+    NavComponent
   ],
   providers: []
 })

@@ -7,30 +7,26 @@ import { CssGridLayoutZeroComponent } from './css-grid-layout-zero/css-grid-layo
 import { CssGridLayoutTwoComponent } from './css-grid-layout-two/css-grid-layout-two.component';
 
 const routes: Routes = [
-    {
-      path: '', children: [
-        {path: '', component: CssGridLayoutComponent},
-        {path: 'cssGridExample0', component: CssGridLayoutZeroComponent},
-        {path: 'cssGridExample1', component: CssGridLayoutOneComponent},
-        {path: 'cssGridExample2', component: CssGridLayoutTwoComponent}
-      ]
-    }
+	{path: '', component: CssGridLayoutComponent},
+	{path: 'cssGridExample0', component: CssGridLayoutZeroComponent},
+	{path: 'cssGridExample1', component: CssGridLayoutOneComponent},
+	{path: 'cssGridExample2', component: CssGridLayoutTwoComponent}
 ];
 
 @NgModule({
-    imports: [
-        MatCardModule,
-        RouterModule.forChild(routes)
-    ],
-    exports: [
-        CssGridLayoutComponent
-    ],
-    declarations: [
-        CssGridLayoutComponent,
-        CssGridLayoutZeroComponent,
-        CssGridLayoutOneComponent,
-        CssGridLayoutTwoComponent
-    ],
-    providers: []
+	imports: [
+		MatCardModule,
+		RouterModule.forChild(routes)
+	],
+	exports: [
+		CssGridLayoutComponent
+	],
+	declarations: [
+		CssGridLayoutComponent,
+		CssGridLayoutZeroComponent,
+		CssGridLayoutOneComponent,
+		CssGridLayoutTwoComponent
+	],
+	providers: []
 })
 export class CssGridLayoutModule {}

@@ -52,7 +52,9 @@ const routes: Routes = [
     PipesModule,
     CommonModule,
     RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [
+    RouterModule
+  ],
   declarations: [
     AboutComponent,
     ContactComponent,
