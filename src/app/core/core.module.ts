@@ -7,6 +7,7 @@ import { ElementsModule } from '../elements/elements.module';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
 import { NavComponent } from './container/nav.component';
 import { SideNavComponent } from './container/side-nav.component';
+import { NatourComponent } from '../elements/natour/natour.component';
 
 const routes: Routes = [
   {

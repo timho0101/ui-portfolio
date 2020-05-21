@@ -1,11 +1,14 @@
-// Light Green: #7ed56f;
-// Medium Green: #55c57a;
-// Dark Green: #28b485;
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
 
-* {
+$color-grey-dark: #777;
+$color-white: #fff;
+
+*, *::after, *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 .body {
@@ -13,64 +16,118 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
-}
+  color: $color-grey-dark;
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to bottom, rgba(128, 214, 113, 0), rgba(40, 180, 133, 0.7)), url(./images/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
-}
+  .header {
+    height: 95vh;
+    background-image: linear-gradient(to bottom, rgba(128, 214, 113, 0), rgba(40, 180, 133, 0.7)), url(./images/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
 
-.logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-}
+    .logo-box {
+      position: absolute;
+      top: 40px;
+      left: 40px;
 
-.logo {
-  height: 20px;
-}
+      .logo {
+        height: 20px;
+      }      
+    }
 
-.text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; 
-}
+    .text-box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; 
 
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
+      .heading-primary {
+        color: $color-white;
+        text-transform: uppercase;
 
-  margin-bottom: 60px;
-}
+        margin-bottom: 60px;
 
-.heading-primary-main {
-  display: block;
-  font-size: 60px;
-  font-weight: 200;
-  letter-spacing: 45px;
+        .heading-primary-main {
+          display: block;
+          font-size: 60px;
+          font-weight: 200;
+          letter-spacing: 45px;
+        
+          animation-name: moveInLeft;
+          animation-duration: 1s;
+          animation-timing-function: ease-out;
+        
+          // animation-delay: 1s;
+          // animation-iteration-count: 3;
+        }
 
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
+        .heading-primary-sub {
+          display: block;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 17.4px;
+        
+          animation: moveInRight 1s ease-out;
+        }
+      }
 
-  // animation-delay: 1s;
-  // animation-iteration-count: 3;
-}
+      // :link is psuedo class, special state of selector 
+      .btn:link,
+      .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+      }
 
-.heading-primary-sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0, .2);
+      }
 
-  animation: moveInRight 1s ease-out;
+      .btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0,0,0, .2);
+      }
+
+      .btn-white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+      }
+
+      .btn::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+      }
+
+      .btn-white::after {
+        background-color: $color-white;
+      }
+      
+      .btn:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+      
+      .btn-animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+      } 
+    }
+  }
 }
 
 @keyframes moveInLeft {
@@ -116,56 +173,10 @@
     transform: translate(0);
   }
 }
-// :link is psuedo class, special state of selector 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 40px;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all .2s;
-  position: relative;
-}
 
-.btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0, .2);
-}
 
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0,0,0, .2);
-}
 
-.btn-white {
-  background-color: #fff;
-  color: #777;
-}
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s;
-}
 
-.btn-white::after {
-  background-color: #fff;
-}
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
 
-.btn-animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards;
-}

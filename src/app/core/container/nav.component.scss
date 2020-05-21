@@ -1,14 +1,32 @@
+@mixin navButtonUi {
+  color: rgba(33, 49, 60);
+  margin-right: 5px;
+  margin-left: 5px;
+  text-decoration: none;
+  padding: 4px;
+
+  &:link, &:focus, &:hover {
+    color: #006cbc;
+    // border-bottom: 3px solid rgb(231, 238, 236);
+    // background-color: darken($color: #000000, $amount: 0);
+  }
+
+  &:active {
+    color: rgb(168,197,229);
+  }
+}
+
 .div-container {
   position: relative;
   z-index: 1;
-  // display: flex;
+  display: flex;
   -webkit-box-align: center;
   align-items: center;
   box-sizing: border-box;
   height: 60px;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 15px;
   background-color: white;
   color: rgb(33, 49, 60);
@@ -24,29 +42,15 @@
     .nav-float-left {
       a {
         float: left;
+        @include navButtonUi;
       }
     }
 
     .nav-float-right {
       a {
         float: right;
+        @include navButtonUi;
       }
     }
   }
-
-
-}
-
-.a-ui {
-  color: rgb(33, 49, 60);
-  margin-right: 5px;
-  margin-left: 5px;
-  text-decoration: none;
-  padding: 4px;
-}
-a, a:focus, a:hover {
-  color: #006cbc;
-}
-.span-ui {
-  position: relative;
 }
