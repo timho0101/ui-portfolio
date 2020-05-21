@@ -1,7 +1,7 @@
 .div-container {
   position: relative;
   z-index: 1;
-  display: flex;
+  // display: flex;
   -webkit-box-align: center;
   align-items: center;
   box-sizing: border-box;
@@ -22,11 +22,15 @@
     grid-gap: 5px;
 
     .nav-float-left {
-
+      a {
+        float: left;
+      }
     }
 
     .nav-float-right {
-
+      a {
+        float: right;
+      }
     }
   }
 

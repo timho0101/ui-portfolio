@@ -14,12 +14,11 @@
   font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
 }
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(128, 214, 113, 0.801), rgba(40, 180, 133, 0.801)), url(./images/hero.jpg);
+  background-image: linear-gradient(to bottom, rgba(128, 214, 113, 0), rgba(40, 180, 133, 0.7)), url(./images/hero.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -33,7 +32,7 @@
 }
 
 .logo {
-  height: 35px;
+  height: 20px;
 }
 
 .text-box {
@@ -54,8 +53,8 @@
 .heading-primary-main {
   display: block;
   font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
+  font-weight: 200;
+  letter-spacing: 45px;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -117,7 +116,7 @@
     transform: translate(0);
   }
 }
-// :link is psudo class, special state of selector 
+// :link is psuedo class, special state of selector 
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -130,7 +129,7 @@
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0, .2);
 }
 
