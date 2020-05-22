@@ -1,9 +1,13 @@
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+@import "scss/abstracts/functions";
+@import "scss/abstracts/maxins";
+@import "scss/abstracts/variables";
 
-$color-grey-dark: #777;
-$color-white: #fff;
+@import "scss/base/base";
+@import "scss/base/animations";
+@import "scss/base/typography";
+@import "scss/base/utilities";
+
+@import "scss/pages/home";
 
 *, *::after, *::before {
   margin: 0;
@@ -20,7 +24,7 @@ $color-white: #fff;
 
   .header {
     height: 95vh;
-    background-image: linear-gradient(to bottom, rgba(128, 214, 113, 0), rgba(40, 180, 133, 0.7)), url(./images/hero.jpg);
+    background-image: linear-gradient(to bottom, rgba($color-primary, 0), rgba($color-primary-dark, 0.8)), url(./images/hero.jpg);
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -32,7 +36,7 @@ $color-white: #fff;
       left: 40px;
 
       .logo {
-        height: 20px;
+        height: 3.5rem;
       }      
     }
 
@@ -52,7 +56,7 @@ $color-white: #fff;
         .heading-primary-main {
           display: block;
           font-size: 60px;
-          font-weight: 200;
+          font-weight: 300;
           letter-spacing: 45px;
         
           animation-name: moveInLeft;
@@ -73,59 +77,61 @@ $color-white: #fff;
         }
       }
 
-      // :link is psuedo class, special state of selector 
-      .btn:link,
-      .btn:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 15px 40px;
-        display: inline-block;
-        border-radius: 100px;
-        transition: all .2s;
-        position: relative;
-      }
+      .btn {
+        // :link is psuedo class, special state of selector 
+        &:link,
+        &:visited {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 15px 40px;
+          display: inline-block;
+          border-radius: 60px;
+          transition: all .2s;
+          position: relative;
+        }
 
-      .btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0, .2);
-      }
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba($color-black, .2);
+        }
 
-      .btn:active {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0,0,0, .2);
-      }
+        &:active {
+          transform: translateY(-1px);
+          box-shadow: 0 5px 10px rgba($color-black, .2);
+        }
 
-      .btn-white {
-        background-color: $color-white;
-        color: $color-grey-dark;
-      }
+        &-white {
+          background-color: $color-white;
+          color: $color-grey-dark;
+        }
 
-      .btn::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 100px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
-      }
+        &::after {
+          content: "";
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          border-radius: 100px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: all .4s;
+        }
 
-      .btn-white::after {
-        background-color: $color-white;
+        &-white::after {
+          background-color: $color-white;
+        }
+        
+        &:hover::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+        
+        &-animated {
+          animation: moveInBottom .5s ease-out .75s;
+          animation-fill-mode: backwards;
+        } 
       }
-      
-      .btn:hover::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-      }
-      
-      .btn-animated {
-        animation: moveInBottom .5s ease-out .75s;
-        animation-fill-mode: backwards;
-      } 
     }
   }
 }
@@ -173,10 +179,3 @@ $color-white: #fff;
     transform: translate(0);
   }
 }
-
-
-
-
-
-
-
