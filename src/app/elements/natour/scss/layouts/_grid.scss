@@ -18,7 +18,6 @@
   [class^="col-"] {
     // background-color: palegreen;
     float: left;
-
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
