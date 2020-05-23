@@ -1,9 +1,9 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
-  margin: 0 auto;
+  // background-color: #eee;
+  margin: 0 9.5rem;
 
-  // display: block;
+  display: block;
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
@@ -16,7 +16,7 @@
   // class*="col-" select class all with "col-"
   
   [class^="col-"] {
-    background-color: palegreen;
+    // background-color: palegreen;
     float: left;
 
     &:not(:last-child) {
