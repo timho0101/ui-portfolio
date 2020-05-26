@@ -53,6 +53,8 @@
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     &--1 {
       background-image: linear-gradient(to bottom, $color-secondary-light, $color-secondary-dark), url(/../../../../assets/images/natour/nat-5.jpg);
@@ -139,5 +141,4 @@
     font-size: 5rem;
     font-weight: 100;
   }
-
 }
