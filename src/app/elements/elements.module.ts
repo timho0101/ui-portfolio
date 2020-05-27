@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { ApiServerComponent } from './api-server/api-server.component';
 import {
   MatSidenavModule,
   MatButtonModule,
@@ -27,7 +26,6 @@ const routes: Routes = [
   },
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'apiServer', component: ApiServerComponent},
   {path: 'natour', component: NatourComponent}
 ];
 
@@ -49,7 +47,6 @@ const routes: Routes = [
   declarations: [
     AboutComponent,
     ContactComponent,
-    ApiServerComponent,
     NatourComponent
   ],
   providers: []
