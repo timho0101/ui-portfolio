@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { LazyLoadingComponent } from './lazy-loading/lazy-loading.component';
 import { ToDoListModule } from './to-do-list/to-do-list.module';
 import { NotesComponent } from './notes/notes.component';
 import { ApiServerComponent } from './api-server/api-server.component';
@@ -30,7 +29,6 @@ const routes: Routes = [
   },
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'lazyLoading', component: LazyLoadingComponent},
   {path: 'todo', loadChildren: () => ToDoListModule},
   {path: 'notes', component: NotesComponent},
   {path: 'apiServer', component: ApiServerComponent},
@@ -55,7 +53,6 @@ const routes: Routes = [
   declarations: [
     AboutComponent,
     ContactComponent,
-    LazyLoadingComponent,
     NotesComponent,
     ApiServerComponent,
     NatourComponent
