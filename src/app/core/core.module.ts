@@ -1,16 +1,15 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
 import { RouterModule, Routes } from '@angular/router';
-import { ContainerComponent } from './container/container.component';
+import { BodyComponent } from './body/body.component';
 import { ElementsModule } from '../elements/elements.module';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
-import { NavComponent } from './container/nav.component';
-import { SideNavComponent } from './container/side-nav.component';
-import { NatourComponent } from '../elements/natour/natour.component';
+import { NavComponent } from './body/nav.component';
+import { SideNavComponent } from './body/side-nav.component';
 
 const routes: Routes = [
   {
-    path: '', component: ContainerComponent, children: [
+    path: '', component: BodyComponent, children: [
       {path: '', loadChildren: () => ElementsModule}
     ]
   }
@@ -24,7 +23,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    ContainerComponent,
+    BodyComponent,
     NavComponent,
     SideNavComponent
   ],
