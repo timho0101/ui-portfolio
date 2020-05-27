@@ -6,7 +6,6 @@ import { LazyLoadingComponent } from './lazy-loading/lazy-loading.component';
 import { ToDoListModule } from './to-do-list/to-do-list.module';
 import { NotesComponent } from './notes/notes.component';
 import { ApiServerComponent } from './api-server/api-server.component';
-import { CssGridLayoutModule } from './css-grid-layout/css-grid-layout.module';
 import {
   MatSidenavModule,
   MatButtonModule,
@@ -35,7 +34,6 @@ const routes: Routes = [
   {path: 'todo', loadChildren: () => ToDoListModule},
   {path: 'notes', component: NotesComponent},
   {path: 'apiServer', component: ApiServerComponent},
-  {path: 'cssGridLayout', loadChildren: () => CssGridLayoutModule},
   {path: 'natour', component: NatourComponent}
 ];
 

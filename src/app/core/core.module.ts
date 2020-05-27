@@ -2,7 +2,6 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
 import { RouterModule, Routes } from '@angular/router';
 import { ContainerComponent } from './container/container.component';
-import { CssGridLayoutModule } from '../elements/css-grid-layout/css-grid-layout.module';
 import { ElementsModule } from '../elements/elements.module';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
 import { NavComponent } from './container/nav.component';
@@ -12,8 +11,7 @@ import { NatourComponent } from '../elements/natour/natour.component';
 const routes: Routes = [
   {
     path: '', component: ContainerComponent, children: [
-      {path: '', loadChildren: () => ElementsModule},
-      {path: '', loadChildren: () => CssGridLayoutModule}
+      {path: '', loadChildren: () => ElementsModule}
     ]
   }
 ];
