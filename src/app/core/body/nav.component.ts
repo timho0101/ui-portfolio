@@ -5,16 +5,10 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div class="div-container wrapper">
       <div class="nav-float-left">
-        <a class="logo">Logo</a>
-        <a>Search</a>
-        <a>Access Manager</a>
-        <a>Support</a>
-        <a>Billing</a>
-      </div>
-      <div class="nav-float-right">
-      <a>Drop Down</a>
-      <a>All Clusters</a>
-      <a>See Product Tour</a>
+      <a href="#">Home</a>
+      <a>About</a>
+      <a>Contact</a>
+      <div></div>
       </div>
     </div>
   `,
