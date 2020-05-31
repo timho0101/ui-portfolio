@@ -4,8 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { BodyComponent } from './body/body.component';
 import { ElementsModule } from '../elements/elements.module';
 import { MatMenuModule, MatButtonModule } from '@angular/material';
-import { NavComponent } from './body/nav.component';
-import { SideNavComponent } from './body/side-nav.component';
+import { NavComponent } from './nav/nav.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 const routes: Routes = [
   {
