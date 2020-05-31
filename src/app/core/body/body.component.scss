@@ -1,4 +1,4 @@
-.css-rwjph0 {
+.div-container {
   display: grid;
   width: 100vw;
   min-height: 100vh;
@@ -16,7 +16,7 @@
 
 }
 
-.css-1eydiud {
+.nav-container {
   background-color: rgb(255, 255, 255);
   position: fixed;
   z-index: 12;
@@ -26,16 +26,18 @@
   height: 60px;
 }
 
-.css-15lz6uf {
+.side-nav-container {
   overflow-y: visible;
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 56px;
   grid-area: side-nav / side-nav / side-nav / side-nav;
   list-style: none;
+  position: fixed;
+  bottom: 23rem;
 }
 
-.css-1lfrx2g {
+.body-container {
   display: flex;
   flex-direction: column;
   -webkit-box-pack: justify;
@@ -46,14 +48,14 @@
   padding: 24px;
 }
 
-.leafygreen-ui-ufpynv {
+.nav-ui-section {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(67, 117, 151, 0.08) 0px 3px 7px 0px;
   z-index: 0;
   position: relative;
 }
 
-.css-1domaf0 {
+.sideNav-ui-section {
   width: 200px;
 }
 
