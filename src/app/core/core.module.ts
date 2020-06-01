@@ -1,41 +1,30 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BodyComponent } from './body/body.component';
+import { MainComponent } from './main/main.component';
 import { ElementsModule } from '../elements/elements.module';
-import { MatMenuModule, MatButtonModule } from '@angular/material';
 import { NavComponent } from './nav/nav.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
-  {
-    path: '', component: BodyComponent, children: [
-      {path: '', loadChildren: () => ElementsModule}
-    ]
-  }
+  {path: '', loadChildren: () => ElementsModule},
+  {path: '', loadChildren: () => SharedModule}
 ];
 
 @NgModule({
   imports: [
     RouterModule,
-    MatMenuModule,
-    MatButtonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forRoot(routes)
   ],
   declarations: [
-    BodyComponent,
+    MainComponent,
     NavComponent,
     SideNavComponent
   ],
   exports: [
     RouterModule,
-    NavComponent,
-    SideNavComponent
+    MainComponent
   ],
   providers: []
 })
-export class CoreModule extends EnsureModuleLoadedOnceGuard {
-  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
-    super(parentModule);
-  }
-}
+export class CoreModule {}

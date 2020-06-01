@@ -3,15 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
-import { ElementsModule } from './elements/elements.module';
-import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 
-import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [
-  {path: '', loadChildren: () => CoreModule}
-];
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,12 +13,9 @@ const routes: Routes = [
   ],
   imports: [
     CoreModule,
-    ElementsModule,
-    SharedModule,
     BrowserModule,
     CommonModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    BrowserAnimationsModule
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent]

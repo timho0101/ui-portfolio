@@ -1,20 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {
-  MatSidenavModule,
-  MatButtonModule,
-  MatToolbarModule,
-  MatMenuModule,
-  MatIconModule,
-  MatGridListModule,
-  MatCardModule
-} from '@angular/material';
-import { PipesModule } from '../shared/pipes/pipes.module';
 import { CommonModule } from '@angular/common';
 import { NatourComponent } from './natour/natour.component';
+import { EnsureModuleLoadedOnceGuard } from '../core/ensure-module-loaded-once.guard';
 
 // natour
-
 
 const routes: Routes = [
   {
@@ -27,14 +17,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    MatSidenavModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatIconModule,
-    MatGridListModule,
-    MatCardModule,
-    PipesModule,
     CommonModule,
     RouterModule.forChild(routes)],
   exports: [
@@ -45,4 +27,8 @@ const routes: Routes = [
   ],
   providers: []
 })
-export class ElementsModule {}
+export class ElementsModule extends EnsureModuleLoadedOnceGuard {
+  constructor(@Optional() @SkipSelf() parentModule: ElementsModule) {
+    super(parentModule);
+  }
+}
