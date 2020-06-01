@@ -1,7 +1,6 @@
 {
   "name": "ui-portfolio",
   "version": "0.0.0",
-  "homepage": "https://timho0101.github.io/ui-portfolio/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
