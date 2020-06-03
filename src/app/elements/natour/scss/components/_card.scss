@@ -57,13 +57,13 @@
     border-top-right-radius: 3px;
 
     &--1 {
-      background-image: linear-gradient(to bottom, $color-secondary-light, $color-secondary-dark), url(/assets/images/natour/nat-5.jpg);
+      background-image: linear-gradient(to bottom, $color-secondary-light, $color-secondary-dark),  url('https://timho0101.github.io/ui-portfolio/assets/images/natour/nat-5.jpg');
     }
     &--2 {
-      background-image: linear-gradient(to bottom, $color-primary-light, $color-primary-dark), url(/assets/images/natour/nat-6.jpg);
+      background-image: linear-gradient(to bottom, $color-primary-light, $color-primary-dark),  url('https://timho0101.github.io/ui-portfolio/assets/images/natour/nat-6.jpg');
     }
     &--3 {
-      background-image: linear-gradient(to bottom, $color-tertiary-light, $color-tertiary-dark), url(/assets/images/natour/nat-7.jpg);
+      background-image: linear-gradient(to bottom, $color-tertiary-light, $color-tertiary-dark),  url('https://timho0101.github.io/ui-portfolio/assets/images/natour/nat-7.jpg');
     }
 
   }
