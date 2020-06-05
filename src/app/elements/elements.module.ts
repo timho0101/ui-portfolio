@@ -10,7 +10,8 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    component: NatourComponent
   },
   {path: 'natour', component: NatourComponent}
 ];
