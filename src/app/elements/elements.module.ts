@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NatourComponent } from './natour/natour.component';
 import { EnsureModuleLoadedOnceGuard } from '../core/ensure-module-loaded-once.guard';
+import { HomepageComponent } from './homepage/homepage.component';
 
 // natour
 
@@ -24,7 +25,8 @@ const routes: Routes = [
     RouterModule
   ],
   declarations: [ 
-    NatourComponent
+    NatourComponent,
+    HomepageComponent
   ],
   providers: []
 })
