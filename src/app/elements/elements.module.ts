@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NatourComponent } from './natour/natour.component';
 import { EnsureModuleLoadedOnceGuard } from '../core/ensure-module-loaded-once.guard';
-import { HomepageComponent } from './homepage/homepage.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
 
 // natour
 
@@ -12,9 +13,11 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full',
-    component: NatourComponent
+    component: HomeComponent
   },
-  {path: 'natour', component: NatourComponent}
+  {path: 'natour', component: NatourComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'contact', component: ContactComponent},
 ];
 
 @NgModule({
@@ -26,7 +29,8 @@ const routes: Routes = [
   ],
   declarations: [ 
     NatourComponent,
-    HomepageComponent
+    HomeComponent,
+    ContactComponent
   ],
   providers: []
 })
