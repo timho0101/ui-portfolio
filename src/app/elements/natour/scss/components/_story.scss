@@ -1,8 +1,22 @@
+@mixin caption {
+  position: absolute;
+  left: 13%;
+  transform: translate(-50%, -50%);
+  color: $color-white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .story {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, .15);
-  background-color: $color-white;
+  background-color: rgba($color-white, .6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -13,21 +27,46 @@
     width: 10rem;
     height: 10rem;
     float: left;
-    // radius: 50%
     shape-outside: circle(50% at 50% 50%);
     -webkit-shape-outside: circle(50% at 50% 50%);
-    
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
-
     transform: translateX(-2rem) skewX(12deg);
+    position: relative;
+
   }
 
   &__image {
     height: 100%;
+    transform: translateX(-2.5rem) scale(1.4);
   }
 
   &__text {
     transform: skewX(12deg);
+  }
+
+  &__caption-1 {
+    top: 50%;
+    @include caption;
+  }
+
+  &__caption-2 {
+    top: 55%;
+    @include caption;
+    left: 12.5%;
+  }
+
+  &:hover &__caption-1 {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  &:hover &__caption-2 {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+
+  &:hover &__image {
+    transform: translateX(-2.5rem) scale(1);
+    filter: blur(3px) brightness(80%);
   }
 }

@@ -12,10 +12,6 @@
 
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
-  // transform: skewY(-7deg);
-  // & > * {
-  //   transform: skewY(7deg);
-  // }
 }
 
 .section-tours {
@@ -25,6 +21,7 @@
 }
 
 .section-stories {
-  padding: 15rem 0;
+  position: relative;
   background-color: $color-grey-light-1;
+  padding: 5rem 0 10rem 0;
 }
