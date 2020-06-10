@@ -6,8 +6,6 @@ import { EnsureModuleLoadedOnceGuard } from '../core/ensure-module-loaded-once.g
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 
-// natour
-
 const routes: Routes = [
   {
     path: '',
