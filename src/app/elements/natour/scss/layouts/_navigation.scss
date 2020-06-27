@@ -5,11 +5,11 @@
 
   &__button {
     background-color: $color-white;
-    height: 5rem;
-    width: 5rem;
+    height: 3.5rem;
+    width: 3.5rem;
     position: fixed;
-    top: 6rem;
-    right: 3rem;
+    top: 8rem;
+    right: 4rem;
     border-radius: 50%;
     z-index: 2000;
 
@@ -20,14 +20,14 @@
   }
 
   &__background {
-    height: 4rem;
-    width: 4rem;
+    height: 2.5rem;
+    width: 2.5rem;
 
     border-radius: 50%;
     position: fixed;
 
-    top: 6.5rem;
-    right: 3.5rem;
+    top: 8.5rem;
+    right: 4.5rem;
 
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1000;
@@ -91,7 +91,7 @@
   }
 
   &__checkbox:checked ~ &__background {
-    transform: scale(60);
+    transform: scale(100);
   }
 
   &__checkbox:checked ~ &__nav {
@@ -102,12 +102,12 @@
   // navigation icon
   &__icon {
     position: relative;
-    margin-top: 2.5rem;
+    margin-top: 1.7rem;
 
     &,
     &::before,
     &::after {
-      width: 3rem;
+      width: 1.7rem;
       height: 2px;
       background-color: $color-grey-dark-3;
       display: inline-block;
@@ -118,20 +118,20 @@
       content: "";
       position: absolute;
       left: 0;
-      transition: all 1s;
+      transition: all .2s;
     }
 
-    &::before { top: -.8rem; }
-    &::after { top: .8rem; }
+    &::before { top: -.5rem; }
+    &::after { top: .5rem; }
   }
 
   // icon is child element of button
   &__button:hover &__icon::before {
-    top: -1rem;
+    top: -.8rem;
   }
 
   &__button:hover &__icon::after {
-    top: 1rem;
+    top: .8rem;
   }
 
   // when checkbox is selected then select it sibling using + and then select child element of button
