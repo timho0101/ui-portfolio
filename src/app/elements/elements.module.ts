@@ -5,6 +5,7 @@ import { NatourComponent } from './natour/natour.component';
 import { EnsureModuleLoadedOnceGuard } from '../core/ensure-module-loaded-once.guard';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { TrilloComponent } from './trillo/trillo.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {path: 'natour', component: NatourComponent},
+  {path: 'trillo', component: TrilloComponent},
   {path: 'home', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
 ];
@@ -28,7 +30,8 @@ const routes: Routes = [
   declarations: [ 
     NatourComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    TrilloComponent
   ],
   providers: []
 })
