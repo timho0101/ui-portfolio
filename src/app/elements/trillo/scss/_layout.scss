@@ -1,0 +1,38 @@
+.container {
+  max-width: 80%;
+  margin: 7rem 0;
+  background-color: $grey-light-1;
+  box-shadow: $shadow-dark;
+  
+  // min-height: 50%;
+}
+
+.header {
+  font-size: 1rem;
+  height: 6rem;
+  background-color: $color-white;
+  border-bottom: $grey-light-2;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: $grey-dark-1;
+
+  // 0 = grow, 0 = srink, 18% = width
+  flex: 0 0 18%
+}
+
+.hotel-view {
+  background-color: $color-white;
+  background-color: darkcyan;
+  
+  flex: 1;
+}

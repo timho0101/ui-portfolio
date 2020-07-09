@@ -12,7 +12,7 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full',
-    component: HomeComponent
+    component: ContactComponent
   },
   {path: 'natour', component: NatourComponent},
   {path: 'trillo', component: TrilloComponent},
