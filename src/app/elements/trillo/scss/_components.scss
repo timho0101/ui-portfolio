@@ -374,8 +374,8 @@
     
     // newer browsers - mask
     background-color: $primary;
-    mask-image: url(/assets/images/trillo/chevron-thin-right.svg);
-    -webkit-mask-image: url(/assets/images/trillo/chevron-thin-right.svg);
+    mask-image: url('https://timho0101.github.io/ui-portfolio/assets/images/trillo/chevron-thin-right.svg');
+    -webkit-mask-image: url('https://timho0101.github.io/ui-portfolio/assets/images/trillo/chevron-thin-right.svg');
     mask-size: cover;
     -webkit-mask-size: cover;
   }
